@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="TicTacToe.makejar" default="makejar" basedir=".">
+  <target name ="makejar" description="Create a jar for the TicTacToe project">
+    
+  	<jar jarfile="TicTacToe.jar" includes="*.class" basedir="bin">
+  	    <!-- define MANIFEST.MF -->
+  	    <manifest>
+  	      <attribute name="Built-By" value="Lydia Keymling" />
+  	      <attribute name="Main-Class" value="TTTConsole" />
+  	    </manifest>
+  	  </jar>
+  	
+  </target>
+</project>
