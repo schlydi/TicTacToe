@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="TicTacToe.makejar" default="makejar" basedir=".">
+  <property name="build" location="bin"/>
   <target name ="makejar" description="Create a jar for the TicTacToe project">
     
-  	<jar jarfile="TicTacToe.jar" includes="*.class" basedir="bin">
+  	<jar jarfile="TicTacToe.jar" includes="*.class" basedir="${build}">
   	    <!-- define MANIFEST.MF -->
   	    <manifest>
   	      <attribute name="Built-By" value="Lydia Keymling" />
@@ -10,5 +11,10 @@
   	    </manifest>
   	  </jar>
   	
+  </target>
+   <target name="clean"
+        description="clean up" >
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
   </target>
 </project>
